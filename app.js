@@ -10,6 +10,7 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.listen(process.env.PORT);
 //connect to mongoDB
 const dbURI =
    "mongodb+srv://salome777:Mongo73738@cluster0.r7sa4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
@@ -43,4 +44,3 @@ app.use("/blogs", blogRoutes);
 app.use((req, res) => {
    res.status(404).render("404", { title: "404" });
 });
-app.listen(process.env.PORT);

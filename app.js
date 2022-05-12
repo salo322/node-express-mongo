@@ -36,7 +36,7 @@ app.engine(
 app.set("view engine", "handlebars");
 
 //home routes
-app.get("/", function (req, res) {
+app.get("/healthCheck", function (req, res) {
    res.redirect("/blogs");
 });
 

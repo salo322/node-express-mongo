@@ -33,16 +33,10 @@ const blog_create_post = (req, res) => {
 };
 
 const get_blogs = (req, res) => {
-   Blog.find()
-      .then((result) => {
-         res.render("getblogs", {
-            title: "get-all-blogs",
-            blogs: result.map((result) => result.toJSON()),
-         });
-      })
-      .catch((err) => {
-         console.log(err);
-      });
+   res.render("getblogs", {
+      title: "get-all-blogs",
+      blogs: Blog.map((result) => result.toJSON()),
+   });
 };
 const blog_details = (req, res) => {
    const id = req.params.id;

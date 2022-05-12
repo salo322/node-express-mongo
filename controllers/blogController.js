@@ -37,7 +37,7 @@ const get_blogs = (req, res) => {
       .sort({ createdAt: -1 })
       .then((result) => {
          res.render("getblogs", {
-            title: "all-blogs",
+            title: "get-all-blogs",
             blogs: result.map((result) => result.toJSON()),
          });
       })

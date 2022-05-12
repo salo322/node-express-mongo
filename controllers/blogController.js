@@ -34,7 +34,7 @@ const blog_create_post = (req, res) => {
 
 const get_blogs = (req, res) => {
    res.render("getblogs", {
-      blog: req.params.toJSON(),
+      blog: req.params,
       title: "Blogs",
    });
 };

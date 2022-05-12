@@ -35,7 +35,7 @@ const blog_create_post = (req, res) => {
 const get_blogs = (req, res) => {
    res.render("getblogs", {
       title: "get-all-blogs",
-      blogs: Blog.map((result) => result.toJSON()),
+      blogs: Blog,
    });
 };
 const blog_details = (req, res) => {

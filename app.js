@@ -17,13 +17,12 @@ app.use(express.static("public"));
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.listen(process.env.PORT);
 //connect to mongoDB
 const dbURI =
    "mongodb+srv://salome777:Mongo73738@cluster0.r7sa4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose
    .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-   .then((result) => console.log(result))
+   .then((result) => app.listen(process.env.PORT))
    .catch((err) => console.log(err));
 
 //set engine

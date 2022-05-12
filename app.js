@@ -39,7 +39,9 @@ app.set("view engine", "handlebars");
 app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
-
+app.get("/getblogs", function (req, res) {
+   res.redirect("/getblogs");
+});
 app.get("/about", function (req, res) {
    res.render("about");
 });

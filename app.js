@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const path = require("path");
 const blogRoutes = require("./routes/blogRoutes");
-const port = "http://ec2-54-234-229-75.compute-1.amazonaws.com/";
 const app = express();
 
 app.use(express.static("public"));
@@ -16,7 +15,7 @@ const dbURI =
    "mongodb+srv://salome777:Mongo73738@cluster0.r7sa4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose
    .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-   .then((result) => app.listen(process.env.PORT))
+   .then((result) => console.log(result))
    .catch((err) => console.log(err));
 
 //set engine
@@ -44,3 +43,4 @@ app.use("/blogs", blogRoutes);
 app.use((req, res) => {
    res.status(404).render("404", { title: "404" });
 });
+app.listen(process.env.PORT);

@@ -34,10 +34,8 @@ const blog_create_post = (req, res) => {
 
 const get_blogs = (req, res) => {
    Blog.find()
-      .sort({ createdAt: -1 })
       .then((result) => {
-         res.render("getblogs", {
-            title: "get-all-blogs",
+         res.json({
             blogs: result.map((result) => result.toJSON()),
          });
       })

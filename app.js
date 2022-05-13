@@ -40,10 +40,7 @@ app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
 app.get("/getblogs", function (req, res) {
-   res.json({
-      name: "salome",
-      age: 20,
-   });
+   res.redirect("/getblogs");
 });
 
 app.get("/about", function (req, res) {

@@ -41,10 +41,17 @@ app.get("/", function (req, res) {
 });
 app.get("/getblogs", function (req, res) {
    res.redirect("/getblogs");
+   console.log("getblogs");
 });
 app.get("/about", function (req, res) {
    res.render("about");
 });
+
+app.post("/login", async (req, res) => {
+   let { name } = req.body;
+   console.log(name);
+});
+
 //blog routes
 app.use("/blogs", blogRoutes);
 

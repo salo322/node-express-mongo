@@ -1,3 +1,6 @@
-<div>
-   {{blogs}}
-</div>
+{{#each blogs}}
+   <a href="/blogs/{{this._id}}" class="single">
+      <h3> {{this.title}} </h3>
+      <p> {{this.snippet}} </p>
+   </a>
+{{/each}}

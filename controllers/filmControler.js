@@ -1,7 +1,7 @@
 const Film = require("../models/films");
 
 const film_create = (req, res) => {
-   res.render("createFilms", {
+   res.render("createfilms", {
       title: "Create new film",
    });
 };
@@ -11,7 +11,7 @@ const film_create_post = (req, res) => {
    film
       .save()
       .then((result) => {
-         res.redirect("/createFilms");
+         res.redirect("/createfilms");
       })
       .catch((err) => {
          console.log(err);

@@ -41,7 +41,7 @@ app.set("view engine", "handlebars");
 app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
-app.get("/getfilms", function (req, res) {
+app.get("/list/getfilms", function (req, res) {
    Blog.find()
       .sort({ createdAt: -1 })
       .then((result) => {

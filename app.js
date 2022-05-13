@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const blogRoutes = require("./routes/blogRoutes");
 const app = express();
+const Blog = require("./models/blog");
+
 app.use(function (req, res, next) {
    res.header("Access-Control-Allow-Origin", "*"); // <<<<<<<<<<<<
    res.header(
@@ -40,10 +42,16 @@ app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
 app.get("/getblogs", function (req, res) {
-   res.json({
-      name: "salome",
-      age: 20,
-   });
+   Blog.find()
+      .sort({ createdAt: -1 })
+      .then((result) => {
+         res.json({
+            blog: result.map((result) => result.toJSON()),
+         });
+      })
+      .catch((err) => {
+         console.log(err);
+      });
 });
 
 app.get("/about", function (req, res) {

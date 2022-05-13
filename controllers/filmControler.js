@@ -1,7 +1,7 @@
 const Film = require("../models/films");
 
 const film_create = (req, res) => {
-   res.render("createfilms", {
+   res.render("addFilm", {
       title: "Create new film",
    });
 };

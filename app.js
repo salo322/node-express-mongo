@@ -58,7 +58,7 @@ app.get("/about", function (req, res) {
    res.render("about");
 });
 app.get("/createfilms", function (req, res) {
-   res.render("createfilms");
+   res.render("addFilm");
 });
 app.get("/allfilms", function (req, res) {
    res.render("allfilms");

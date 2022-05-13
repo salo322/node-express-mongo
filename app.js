@@ -57,7 +57,9 @@ app.get("/getblogs", function (req, res) {
 app.get("/about", function (req, res) {
    res.render("about");
 });
-
+app.get("/createFilms", function (req, res) {
+   res.render("createFilms");
+});
 app.post("/login", async (req, res) => {
    let { name } = req.body;
    console.log(name);

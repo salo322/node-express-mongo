@@ -40,9 +40,22 @@ app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
 app.get("/getblogs", function (req, res) {
-   res.redirect("/getblogs");
+   res.json({
+      name: "salome",
+      age: 20,
+   });
 });
-
+// const get_blogs = (req, res) => {
+//    Blog.find()
+//       .then((result) => {
+//          res.json({
+//             blogs: result.map((result) => result.toJSON()),
+//          });
+//       })
+//       .catch((err) => {
+//          console.log(err);
+//       });
+// };
 app.get("/about", function (req, res) {
    res.render("about");
 });

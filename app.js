@@ -57,6 +57,9 @@ app.get("/getblogs", function (req, res) {
 app.get("/about", function (req, res) {
    res.render("about");
 });
+app.get("/createfilms", function (req, res) {
+   res.render("createfilms");
+});
 app.get("/allfilms", function (req, res) {
    res.render("allfilms");
 });

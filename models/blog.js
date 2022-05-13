@@ -7,11 +7,11 @@ const blogSchema = new Schema(
          type: String,
          required: true,
       },
-      snippet: {
+      desc: {
          type: String,
          required: true,
       },
-      body: {
+      image: {
          type: String,
          required: true,
       },

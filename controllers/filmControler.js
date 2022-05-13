@@ -11,7 +11,7 @@ const film_create_post = (req, res) => {
    film
       .save()
       .then((result) => {
-         res.redirect("/");
+         res.redirect("/allfilms");
       })
       .catch((err) => {
          console.log(err);
@@ -21,7 +21,7 @@ const film_home = (req, res) => {
    Film.find()
       .sort({ createdAt: -1 })
       .then((result) => {
-         res.render("home", {
+         res.render("allfilms", {
             title: "all-films",
             blogs: result.map((result) => result.toJSON()),
          });

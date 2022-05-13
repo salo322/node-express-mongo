@@ -41,12 +41,12 @@ app.set("view engine", "handlebars");
 app.get("/", function (req, res) {
    res.redirect("/blogs");
 });
-app.get("/getblogs", function (req, res) {
+app.get("/getfilms", function (req, res) {
    Blog.find()
       .sort({ createdAt: -1 })
       .then((result) => {
          res.json({
-            blog: result.map((result) => result.toJSON()),
+            films: result.map((result) => result.toJSON()),
          });
       })
       .catch((err) => {

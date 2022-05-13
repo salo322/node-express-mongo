@@ -1,8 +1,16 @@
     {{>header}}
     <main>
   <h1>{{title}}</h1>
-   
+{{!--    
      {{#each blogs}}
+     <a href="/blogs/{{this._id}}" class="single">
+      <h3> {{this.title}} </h3>
+      <p> {{this.snippet}} </p>
+      <p>{{this.link}}</p>
+      </a>
+     {{/each}} --}}
+
+        {{#each films}}
      <a href="/blogs/{{this._id}}" class="single">
       <h3> {{this.title}} </h3>
       <p> {{this.snippet}} </p>

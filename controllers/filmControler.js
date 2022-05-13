@@ -23,7 +23,7 @@ const film_home = (req, res) => {
       .then((result) => {
          res.render("allfilms", {
             title: "all-films",
-            blogs: result.map((result) => result.toJSON()),
+            films: result.map((result) => result.toJSON()),
          });
       })
       .catch((err) => {

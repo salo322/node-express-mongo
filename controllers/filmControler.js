@@ -11,7 +11,7 @@ const film_create_post = (req, res) => {
    film
       .save()
       .then((result) => {
-         res.redirect("/createfilms");
+         res.redirect("/allfilms");
       })
       .catch((err) => {
          console.log(err);

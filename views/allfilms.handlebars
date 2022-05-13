@@ -2,12 +2,12 @@
     <main>
   <h1>{{title}}</h1>
    
-     {{#each blogs}}
-     <a href="/blogs/{{this.name}}" class="single">
+     {{#each films}}
+      <p>{{this.name}}</p>
       <h3> {{this.description}} </h3>
       <p> {{this.image}} </p>
       <p>{{this.link}}</p>
-      </a>
+ 
      {{/each}}
   
 </main>
